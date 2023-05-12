@@ -34,6 +34,8 @@
 // This is where all the information of the guestes will be stored
 let guests = [];
 
+// Function to get a random item from an array
+
 //Possible Guest firstNames, lastNames , plates, cups and desserts.
 let firstName = [
   "Ashe",
@@ -83,31 +85,36 @@ let species = [
   "Species9",
   "Species10",
 ];
-// let teaCups = [
-//   "TeaCup1",
-//   "TeaCup2",
-//   "TeaCup3",
-//   "TeaCup4",
-//   "TeaCup5",
-//   "TeaCup6",
-//   "TeaCup7",
-//   "TeaCup8",
-//   "TeaCup9",
-//   "TeaCup10",
-// ];
-// let teaPlates = [
-//   "TeaPlate1",
-//   "TeaPlate2",
-//   "TeaPlate3",
-//   "TeaPlate4",
-//   "TeaPlate5",
-//   "TeaPlate6",
-//   "TeaPlate7",
-//   "TeaPlate8",
-//   "TeaPlate9",
-//   "TeaPlate10",
-// ];
+let teaCupsColor = [
+  "TeaCupColor1",
+  "TeaCupColor2",
+  "TeaCupColor3",
+  "TeaCupColor4",
+  "TeaCupColor5",
+  "TeaCupColor6",
+  "TeaCupColor7",
+  "TeaCupColor8",
+  "TeaCupColor9",
+  "TeaCupColor10",
+];
+let teaPlatesColor = [
+  "TeaPlateColor1",
+  "TeaPlateColor2",
+  "TeaPlateColor3",
+  "TeaPlateColor4",
+  "TeaPlateColor5",
+  "TeaPlateColor6",
+  "TeaPlateColor7",
+  "TeaPlateColor8",
+  "TeaPlateColor9",
+  "TeaPlateColor10",
+];
 // Now we need to assign all the keys and values for each guest from the tables I made (and yes I did get bored of coming up with names )
+
+function getRandomTeaSupply(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
 
 for (let i = 0; i < 10; i++) {
   let guest = {};
@@ -116,8 +123,10 @@ for (let i = 0; i < 10; i++) {
   guest.species = species[i];
   guest.teaCup = true;
   guest.teaPlate = true;
-  guest.dessert = desserts[i];
+  guest.dessert = getRandomTeaSupply(desserts);
+  guest.teaCupColor = getRandomTeaSupply(teaCupsColor);
+  guest.teaPlateColor = getRandomTeaSupply(teaPlatesColor);
   guests.push(guest);
 }
+
 console.log(guests);
-console.log(Math.random);
