@@ -107,15 +107,16 @@ let teaPlatesColor = [
   "TeaPlateColor7",
   "TeaPlateColor8",
   "TeaPlateColor9",
-  "TeaPlateColor10",
+  "TeaPlateColor11",
 ];
 // Now we need to assign all the keys and values for each guest from the tables I made (and yes I did get bored of coming up with names )
 
+//This function will choose a random index for any array i ask it to look through
 function getRandomTeaSupply(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
-
+//This will create all the guest objects, this will tell which things each guest will recieve when arriving at the tea party
 for (let i = 0; i < 10; i++) {
   let guest = {};
   guest.firstName = firstName[i];
