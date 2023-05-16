@@ -34,3 +34,35 @@ const stringNumber = "1234";
 
 console.log(number1 == stringNumber); //true
 console.log(number1 === stringNumber); //false
+
+//For OF , For IN Loops
+
+for (let i = 0; i < 11; i++) {
+  console.log(i);
+}
+
+//FOR OF, these are loops that you can use with string and arrys. DOES NOT WORK WITH OBJ
+let i = "Happy"; //Initializer
+for (let char of i) {
+  //condiotion & iteration
+  //code
+}
+//Prints out each letter in the string
+let str2 = "Sadness";
+
+for (let dog of str2) {
+  console.log(dog);
+}
+//Prints out each element of the array
+let animals1 = [null, 112, "moose", "kitten"];
+
+for (let animals of animals1) {
+  for (let char of animals) {
+    console.log(char);
+  }
+}
+
+obj1 = {
+  name: "Luciano",
+  number: 12,
+};
